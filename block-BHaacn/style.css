@@ -1,0 +1,331 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*variables*/
+:root{
+    --primery:#F9234D;
+    --secondry:#01122D;
+    --bg-primery:#DFECFF;
+    --text:#6C6B72;
+    --footer1:#23347B;
+    --footer2:#102169;
+}
+/*General styles*/
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+line-height:1.5;
+font-family: 'Nunito', sans-serif;
+color: var(--secondry);
+}
+.width-full{
+    width: 100%;
+}
+.font-0{
+    font-size: 0;
+}
+.container{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+.btn,.logo{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    padding: 0.5rem 1.4rem;
+    border: 0;
+    
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+}
+strong{
+    color: var(--primery);
+}
+.btn{
+    background-color: var(--primery);
+    border-radius: 5px;
+}
+.padding{
+    padding:2rem 0;
+}
+
+/* flex properties */
+.flex{
+display:flex;
+}
+.space-between{
+justify-content:space-between;
+}
+.flex-48{
+flex:0 1 48%;
+}
+.flex-30{
+flex:0 1 30%;
+}
+.flex-15{
+    flex:0 1 15%;
+    }
+.flex-60{
+    flex:0 1 60%;
+     }
+.flex-23{
+    flex:0 1 23%;
+    }
+.align-items{
+    align-items: center;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*header*/
+header{
+    position: absolute;
+    z-index: 8;
+    width: 100%;
+}
+ul li a{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: white;
+}
+.navbar ul li{
+padding-left: 1.8rem;
+}
+#toggle,.bars{
+    display: none;
+}
+.logo{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+.logo{
+    padding-left: 0;
+}
+/*Hero*/
+.hero{
+    
+    background: linear-gradient(rgba(53,35,167,0.8),rgba(53,35,167,0.8)),url(../assets/banner.png) no-repeat;
+    background-size: cover;
+    color: white;
+    position: relative;
+    padding-top: 6rem;
+}
+h1,h2{
+    font-size: 2.9rem;
+    font-weight: 700;
+}
+.hero p,.about p{
+    font-size: 1.4rem;
+   margin: 1rem 0;
+}
+/*about*/
+.about p{
+    color: var(--text);
+}
+/*schedule*/
+.shedule-item{
+    margin:3rem 0;
+}
+.schedule-date,.schedule-date-last{
+    width: 10rem;
+    height: 10rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+    background-color: var(--primery);
+    position: relative;
+}
+.schedule h4{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.schedule-date::before{
+    content: "";
+    height: 4rem;
+    border-right: 4px dashed var(--primery);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+}
+/*Qualities*/
+.quality{
+    background-color: var(--bg-primery);
+}
+.quality-item{
+    position: relative;
+    border: 2px dashed var(--primery);
+    padding: 1rem;
+    padding-top: 1.4rem;
+    margin-top: 1.4rem;
+}
+.quality-item .no{
+    font-size: 1.4rem;
+    font-weight: 700;
+    height: 2rem;
+    width: 2rem;
+    position:absolute;
+    top: -10%;
+    left: 5%;
+    color: var(--primery);
+    background-color: var(--bg-primery);
+}
+.quality h2{
+    text-align: center;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 700;  
+}
+/*summary*/
+.summery-item{
+    text-align: center;
+    padding: 2rem;
+}
+.summery-item .numbers{
+ font-size: 2rem;
+ font-weight: 700;
+}
+.summary .idea{
+    background-color: var(--primery);
+    color: white;
+}
+/*sec-footer*/
+.sec-footer{
+    background-color: var(--footer1);
+}
+.sec-footer ul li a{
+    font-size: 1.6rem;
+    color: var(--text);
+}
+.sec-footer h3{
+    color: white;
+}
+.sec-footer .footer-icon{
+    font-size: 1.5rem;
+    color: var(--text);
+}
+/*footer*/
+footer{
+    text-align: center;
+    background-color: var(--footer2);
+    color: var(--text);
+    font-size: 1.4rem;
+}
+/*media queries*/
+@media screen and (max-width:768px){
+    html{
+        font-size: 12px;
+    }
+    .container{
+        max-width: 720px;
+    }
+    /*flex class*/
+    .column{
+        flex-direction: column;
+    }
+    .wrap{
+        flex-wrap: wrap;
+    }
+    .flex-23,.flex-30,.flex-48{
+        flex: 1 1 100%;
+    }
+    /*navbar*/
+    .nav{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 100vh;
+        background-color: rgba(53,35,167,0.8);
+        padding-top: 12rem;
+        
+    }
+    header{
+        background-color: rgba(53,35,167,1);
+        z-index: 99;
+        height: 80px;
+        position: fixed;
+        width: 100%;
+    }
+    .nav li{
+        margin: 3rem 0;
+        text-align: center;
+    }
+    #toggle:checked ~ .nav{
+        display: inline-block;
+    }
+    .bars{
+        font-size: 2rem;
+        color: white;
+        display: inline-block;
+    }
+    .logo,.bars{
+        position: fixed;
+        z-index: 99;
+        top: 1.5rem;
+    }
+    .logo{
+        left: 2rem;
+    }
+    .bars{
+        right: 2rem;
+    }
+}
